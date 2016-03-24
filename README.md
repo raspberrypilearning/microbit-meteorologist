@@ -1,8 +1,8 @@
-# Example Resource
+# A micro:bit meteorologist
 
 ![](cover.png)
 
-Short description of the resource
+In this resource you can use a serial link over USB between your Raspberry Pi and a micro:bit, enabling the micro:bit to display weather symbols for the next seven days of weather forecasts.
 
 ## Licence
 
@@ -12,4 +12,4 @@ Unless otherwise specified, everything in this repository is covered by the foll
 
 ***Example Resource*** by the [Raspberry Pi Foundation](http://www.raspberrypi.org) is licenced under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
-Based on a work at https://github.com/raspberrypilearning/example-resource
+Based on a work at https://github.com/raspberrypilearning/microbit-meteorologist

@@ -1,7 +1,5 @@
-By creating a something with your Raspberry Pi you will learn:
+By creating a micro:bit meteorologist
 
-- How to set up a Raspberry Pi camera
-- How to use GPIO pins
-- How to create a circuit on a breadboard
-- Controlling GPIO pins with Python code
-- Controlling the camera module with Python code
+- How to start two-way communication between your micro:bit and your Raspberry Pi
+- How to fetch a weather forecast using pyowm
+- How to create custom images to display on the micro:bit

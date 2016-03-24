@@ -1,5 +1,5 @@
 # Hardware Requirements
 
-Some extra information about the specifics of the hardware requirements or alternative products you can use.
-
-This file is optional
+For this project you will need:
+- A BBC micro:bit
+- A USB-A to micro USB-B cable
