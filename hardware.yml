@@ -1,5 +1,5 @@
-- name: A BBC micro:bit
-  img: mcirobit
-- name: USB-A to micro USB-B cable
+- name: BBC micro:bit
+  img: microbit
+- name: USB A-to-micro-B cable
   img: microUSB
 
