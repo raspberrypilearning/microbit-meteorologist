@@ -1,14 +1,14 @@
-# micro:bit Meteorologist
+# micro:bit meteorologist
 
-In this resource you will use your Raspberry Pi to fetch a seven day weather forecast. It can then send the data over to your micro:bit, which will display a graphic on it's 5x5 LED matrix to depict the weather
+In this resource, you'll use your Raspberry Pi to fetch a seven-day weather forecast. It can then send the data over to your micro:bit, which will display a graphic on its 5x5 LED matrix to show the weather.
 
 ## Accessing OpenWeatherMaps
 
-The first thing you'll have to do is get access to a **weather API** stands for Application Programming Interface. This sounds complicated, but really it's just a set of rules telling your programs how talk to other software.
+The first thing you'll have to do is get access to a **weather API**. API stands for Application Programming Interface. This sounds complicated, but it's just a set of rules telling your programs how to talk to other software.
 
-1.  The weather service you're going to use in this resource is called [OpenWeatherMap](<http://openweathermap.org/>). It's a completely free service, and has an easy-to-use API. You're going to need your own account though, so click on the link and head on over to the website.
+1.  The weather service you're going to use in this resource is called [OpenWeatherMap](http://openweathermap.org/). It's a completely free service, and has an easy-to-use API. You're going to need your own account though, so click on the link to go to the website.
 
-2.  Click on \`Sign Up\`:
+1.  Click on 'Sign Up':
 
 	![img](images/screen1.png)
 
@@ -16,7 +16,7 @@ The first thing you'll have to do is get access to a **weather API** stands for 
 
 	![img](images/screen2.png)
 
-1.  Once you are logged in, you should see a page with your **secret** API key. This is important, so copy it to your clipboard:
+1.  Once you're logged in, you should see a page with your **secret** API key. This is important, so copy it to your clipboard:
 
 	![img](images/screen3.png)
 
@@ -24,8 +24,8 @@ The first thing you'll have to do is get access to a **weather API** stands for 
 
 Now it's time to fetch the weather forecast using a little bit of Python.
 
-1.  Open IDLE (`Menu` > `Programming` > `Python 3 (IDLE)`) and create a new file (`File` > `New File`).
-2.  With a few lines of Python 3 you can access the OpenWeatherMap API, and get the seven day forecast.
+1.  Open IDLE (**Menu** > **Programming** > **Python 3 (IDLE)**) and create a new file (**File** > **New File**).
+1.  With a few lines of Python 3, you can access the OpenWeatherMap API and get the seven-day forecast:
 
 	```python
 	import pyowm
@@ -33,7 +33,7 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 	## Copy and paste your key into the line below
 	KEY = '61a75f732e10039232d4122fbff52e96'
 
-	## Place your location (city,country code) into the line below
+	## Place your location (city, country code) into the line below
 	location = 'New York,us'
 
 	owm = pyowm.OWM(KEY)
@@ -42,42 +42,42 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 	icons = [weather.get_weather_icon_name() for weather in f]
 	```
 
-1.  Save the file (`Ctrl` + `s`) and then run it (`F5`), then the weather data should be fetched.
-2.  To look at the weather data, switch into the Python **shell**, and type:
+1.  Save the file (**Ctrl** + **s**) and then run it (**F5**); the weather data should now be fetched.
+1.  To look at the weather data, switch into the Python shell and type:
 
 	```python
 	icons
 	```
 
-1.  You should see some data that looks like this:
+You should see some data that looks like this:
 
 	```python
 	['02d', '10d', '01d', '01d', '10d', '10d', '01d']
 	```
 
-1.  These strings represent icons that describe the weather at your location. You can see what they mean by looking at [OpenWeatherMap website](http://openweathermap.org/weather-conditions) or look at the image below
+These strings represent icons that describe the weather at your location. You can see what they mean by looking at the [OpenWeatherMap website](http://openweathermap.org/weather-conditions), or look at the image below:
 
 ![img](images/screen4.png)
 
 ## Displaying weather icons
 
-1.  Next you're going to write some MicroPython code for the micro:bit, to display the weather icons.
+1.  Next, you're going to write some MicroPython code for the micro:bit to display the weather icons.
 
-2.  Connect your micro:bit to the Raspberry Pi using a USB-A to micro USB-B cable.
+1.  Connect your micro:bit to the Raspberry Pi using a USB A-to-micro-B cable.
 
-3.  Now open LXTerminal on your Raspberry Pi and type the following into the prompt, to start **mu**.
+1.  Now open LXTerminal on your Raspberry Pi and type the following into the prompt, to start mu:
 
 	```bash
 	./mu
 	```
 
-1.  A window should open up that looks like this:
+1.  A window should open that looks like this:
 
 	![img](images/screen5.png)
 
-1.  Now you need to create your weather icons. The micro:bit has a 5x5 LED matrix. Each LED's brightness can be set to a value between 0 and 9, with 0 being off and 9 being the brightest.
+Now you need to create your weather icons. The micro:bit has a 5x5 LED matrix. Each LED's brightness can be set to a value between 0 and 9, with 0 being off and 9 being the brightest.
 
-2.  To create an image, you use the following syntax:
+1.  To create an image, use the following syntax:
 
 	```python
 	sun = Image('00000:'
@@ -89,7 +89,7 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 
 1.  The above would set the entire top row of pixels to be off. The second row of pixels would have the middle pixel set to the brightest level.
 
-2.  To see the image, you can add a single line, and then \`Flash\` the program.
+1.  To see the image, you can add a single line and then `Flash` the program:
 
 	```python
 	sun = Image('00000:'
@@ -101,9 +101,9 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 	display.show(sun)
 	```
 
-1.  The sun icon should be displayed on your micro:bit now.
+The sun icon should now be displayed on your micro:bit.
 
-2.  Next you need to create an image for each icon show above. You can use the ones below, or be a little more creative and make your own.
+1.  Next, you need to create an image for each icon shown above. You can use the ones below, or be a little more creative and make your own:
 
 	```python
 	sun = Image('00000:'
@@ -153,11 +153,11 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 			 '22222:')
 	```
 
-1.  Test each of your images, to make sure that look OK.
+1.  Test each of your images, to make sure they look okay.
 
 ## Communication between the micro:bit and the Raspberry Pi
 
-1.  The micro:bit and the Raspberry Pi can communicate over USB. You'll need another `import` line at the top of your Python file, so switch back into **IDLE** and add a line so it looks like this:
+1.  The micro:bit and the Raspberry Pi can communicate over USB. You'll need another `import` line at the top of your Python file, so switch back into IDLE and add a line so it looks like this:
 
 	```python
 	import pyowm
@@ -171,7 +171,7 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 	icons = [weather.get_weather_icon_name() for weather in f]
 	```
 
-1.  To set up communication you need to set some variables:
+1.  To set up communication, you need to set some variables:
 
 	```python
 	## Edit the line below to the correct port
@@ -186,13 +186,13 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 	s.readline()
 	```
 
-1.  The `PORT` will depend what else you have connected to the Raspberry Pi. To see which port your micro:bit is connected to, disconnect it from your Raspberry Pi and then in LXTerminal, type the following:
+1.  The `PORT` line will vary, depending on what else you have connected to the Raspberry Pi. To see which port your micro:bit is connected to, disconnect it from your Raspberry Pi and then type the following in LXTerminal:
 
 	```bash
 	ls /dev/ttyA*
 	```
 
-1.  Reconnect the micro:bit and type the line again.
+1.  Reconnect the micro:bit and type the line again:
 
 	```bash
 	ls /dev/ttyA*
@@ -200,19 +200,19 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 
 1.  You should see a new entry in the list. This is the port that your micro:bit is connected to, so edit the line in the Python file to show the correct port.
 
-2.  Save and run the file, and check that you receive no errors.
+1.  Save and run the file, and check that you receive no errors.
 
 ## Sending the weather
 
-1.  Next you're going to send the weather data from the list of icons, over to the micro:bit. The particular icon that will be sent, will depend on the button pushes of the micro:bit.
+Next, you're going to send the weather data from the list of icons over to the micro:bit. The particular icon that will be sent will depend on the micro:bit's button pushes.
 
-2.  Start off by setting the icon to send as the `0` item in the list.
+1.  Start off by setting the icon to send as the `0`th item in the list:
 
 	```python
 	icon = 0
 	```
 
-1.  Next, within an infinite loop, you can send the icon to the micro:bit. The data needs to be encoded before it can be sent though.
+1.  Next, within an infinite loop, you can send the icon to the micro:bit. The data needs to be **encoded** before it can be sent:
 
 	```python
 	while True:
@@ -223,9 +223,9 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 
 ## Receiving the weather data
 
-1.  Switch back to **mu**.
+1.  Switch back to mu.
 
-2.  To choose the correct image you'll need to store them in a dictionary. Add the following lines to you MicroPython file in **mu**.
+1.  To choose the correct image, you'll need to store them in a dictionary. Add the following lines to your MicroPython file in mu:
 
    ```python
    weather = {'01d': sun, '02d':few, '03d': cloud, 
@@ -233,7 +233,7 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 		  '11d':thunder, '13d':snow, '50d': mist}
    ```
 
-1.  Now, within an infinite loop, you can get the current weather from the Raspberry Pi and display the correct weather icon. The data that is sent from the Raspberry Pi needs to be decoded though.
+1.  Now, within an infinite loop, you can get the current weather from the Raspberry Pi and display the correct weather icon. The data that is sent from the Raspberry Pi needs to be **decoded**:
 
 	```python
 	while True:
@@ -246,13 +246,13 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 		pass
 	```
 
-1.  Flash the program to your micro:bit and then switch back over to IDLE and run the python program there. You should see a weather icon displayed on the microbit.
+1.  Flash the program to your micro:bit, then switch back over to IDLE and run the Python program there. You should see a weather icon displayed on the micro:bit.
 
 ## Cycling over the forecast
 
-1.  The weather data collected by the Raspberry Pi, is a seven day forecast. The next step will be to allow the micro:bit to cycle over the forecast. To do this you'll need to let the micro:bit talk to the Raspberry Pi. This is easy to do using `print()` statements.
+The weather data collected by the Raspberry Pi is a seven-day forecast. The next step will be to allow the micro:bit to cycle over the forecast. To do this, you'll need to let the micro:bit talk to the Raspberry Pi. This is easy to do using `print()` statements.
 
-2.  In **mu** create a function to get the button pushes on the micro:bit
+1.  In mu, create a function to get the micro:bit's button pushes:
 
 	```python
 	def get_sensor_data():
@@ -260,7 +260,7 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 		print(a, b)
 	```
 
-1.  Then call the function in the `while` loop.
+1.  Then call the function in the `while` loop:
 
 	```python
 	while True:
@@ -283,7 +283,7 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 		data_list = data.rstrip().split(' ')
 	```
 
-1.  data<sub>list</sub> should now contain the data sent from the micro:bit. It should contain `True` / `False` data-types for whether button A or button B have been pushed. You can now change the value of `icon` depending if the buttons are pushed.
+1.  The `data_list` should now contain the data sent from the micro:bit. It should contain `True` and `False` data types, depending on whether button A or button B has been pushed. You can now change the value of `icon` if the buttons are pushed.
 
 	```python
 	while True:
@@ -302,7 +302,7 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 		pass
 	```
 
-1.  Try flashing the micro:bit again and then running the program. Pushing Button A or B should cycle through the weather icons for you current location. If something is not working, then check your code with the complete code listings below.
+1.  Try flashing the micro:bit again and then running the program. Pushing button A or B should cycle through the weather icons for your current location. If something isn't working, then check your code with the complete code listings below.
 
 ### micro:bit code
 
@@ -416,7 +416,7 @@ while True:
 s.close()
 ```
 
-## What Next?
+## What next?
 
--   You could make some changes to the code to give animated weather icons. Have a look at the [documentation](https://microbit-micropython.readthedocs.org/en/latest/) to see how to make animations for the micro:bit
--   You could use [Touch Develop](https://www.touchdevelop.com/microbit) to write your micro:bit code and use the Bluetooth functionality to communicate with a computer, and receive weather data. Giving you a portable meteorologist.
+-   You could make some changes to the code to give animated weather icons. Have a look at the [documentation](https://microbit-micropython.readthedocs.org/en/latest/) to see how to make animations for the micro:bit.
+-   You could use [Touch Develop](https://www.touchdevelop.com/microbit) to write your micro:bit code. This uses the Bluetooth functionality to communicate with a computer and receive weather data, giving you a portable meteorologist.
