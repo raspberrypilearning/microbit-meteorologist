@@ -1,4 +1,4 @@
-# Micro:bit meteorologist teacher's guide
+# The micro:bit meteorologist teacher's guide
 
 ## Objectives
 
