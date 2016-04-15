@@ -65,11 +65,7 @@ These strings represent icons that describe the weather at your location. You ca
 
 1.  Connect your micro:bit to the Raspberry Pi using a USB A-to-micro-B cable.
 
-1.  Now open LXTerminal on your Raspberry Pi and type the following into the prompt, to start mu:
-
-	```bash
-	./mu
-	```
+1.  Open mu (**Menu** > **Programming** > **mu**) 
 
 1.  A window should open that looks like this:
 
@@ -103,54 +99,18 @@ Now you need to create your weather icons. The micro:bit has a 5x5 LED matrix. E
 
 The sun icon should now be displayed on your micro:bit.
 
-1.  Next, you need to create an image for each icon shown above. You can use the ones below, or be a little more creative and make your own:
+1.  Next, you need to create an image for each icon shown above. You can use the ones below, or be a little more creative and make your own. Too save space, the images have been written on a single line.:
 
 	```python
-	sun = Image('00000:'
-			'00900:'
-			'09990:'
-			'00900:'
-			'00000:')
-	few = Image('04040:'
-			'44444:'
-			'04040:'
-			'00000:'
-			'00000:')
-	cloud = Image('06060:'
-			  '66666:'
-			  '06060:'
-			  '00000:'
-			  '00000:')
-	broken = Image('09090:'
-			   '99999:'
-			   '09090:'
-			   '00000:'
-			   '00000:')
-	shower = Image('09090:'
-			   '99999:'
-			   '09090:'
-			   '30303:'
-			   '03030:')
-	rain = Image('07070:'
-			 '77777:'
-			 '07070:'
-			 '20202:'
-			 '02020:')
-	thunder = Image('90090:'
-			'09009:'
-			'00900:'
-			'09009:'
-			'90090:')
-	snow = Image('70707:'
-			 '07070:'
-			 '70707:'
-			 '07070:'
-			 '70707:')
-	mist = Image('22222:'
-			 '33333:'
-			 '22222:'
-			 '33333:'
-			 '22222:')
+	sun = Image('00000:00900:09990:00900:00000:')
+	few = Image('04040:44444:04040:00000:00000:')
+	cloud = Image('06060:66666:06060:00000:00000:')
+	broken = Image('09090:99999:09090:00000:00000:')
+	shower = Image('09090:99999:09090:30303:03030:')
+	rain = Image('07070:77777:07070:20202:02020:')
+	thunder = Image('90090:09009:00900:09009:90090:')
+	snow = Image('70707:07070:70707:07070:70707:')
+	mist = Image('22222:33333:22222:33333:22222:')
 	```
 
 1.  Test each of your images, to make sure they look okay.
