@@ -199,11 +199,11 @@ Next, you're going to send the weather data from the list of icons over to the m
 	while True:
 		sleep(500)
 		try:
-		bytestring = uart.readline()
-		icon = weather[str(bytestring,'utf-8')]
-		display.show(icon)
+		    bytestring = uart.readline()
+		    icon = weather[str(bytestring,'utf-8')]
+		    display.show(icon)
 		except:
-		pass
+		    pass
 	```
 
 1.  Flash the program to your micro:bit, then switch back over to IDLE and run the Python program there. You should see a weather icon displayed on the micro:bit.
@@ -227,11 +227,11 @@ The weather data collected by the Raspberry Pi is a seven-day forecast. The next
 		sleep(500)
 		get_sensor_data()
 		try:
-		bytestring = uart.readline()
-		icon = weather[(str(bytestring))[2:-1]]
-		display.show(icon)
+		    bytestring = uart.readline()
+		    icon = weather[(str(bytestring))[2:-1]]
+		    display.show(icon)
 		except:
-		pass
+		    pass
 	```
 
 1.  Back in IDLE, you need to get the Raspberry Pi to read the data sent from the micro:bit. Change the `while` loop so that it looks like this:
@@ -251,15 +251,15 @@ The weather data collected by the Raspberry Pi is a seven-day forecast. The next
 		data = s.readline().decode('UTF-8')
 		data_list = data.rstrip().split(' ')
 		try:
-		a,b = data_list
-		if a == 'True':
-			icon -= 1
-			print(icon%len(icons))
-		if b == 'True':
-			icon += 1
-			print(icon%len(icons))
+		    a,b = data_list
+		    if a == 'True':
+			    icon -= 1
+			    print(icon%len(icons))
+		    if b == 'True':
+			    icon += 1
+			    print(icon%len(icons))
 		except:
-		pass
+		    pass
 	```
 
 1.  Try flashing the micro:bit again and then running the program. Pushing button A or B should cycle through the weather icons for your current location. If something isn't working, then check your code with the complete code listings below.
@@ -327,11 +327,11 @@ while True:
     sleep(500)
     get_sensor_data()
     try:
-	bytestring = uart.readline()
-	icon = weather[(str(bytestring))[2:-1]]
-	display.show(icon)
+	    bytestring = uart.readline()
+	    icon = weather[(str(bytestring))[2:-1]]
+	    display.show(icon)
     except:
-	pass
+	    pass
 ```
 
 ### Raspberry Pi code
@@ -363,15 +363,15 @@ while True:
     data = s.readline().decode('UTF-8')
     data_list = data.rstrip().split(' ')
     try:
-	a,b = data_list
-	if a == 'True':
-	    icon -= 1
-	    print(icon%len(icons))
-	if b == 'True':
-	    icon += 1
-	    print(icon%len(icons))
+	    a,b = data_list
+	    if a == 'True':
+	        icon -= 1
+	        print(icon%len(icons))
+	    if b == 'True':
+	        icon += 1
+	        print(icon%len(icons))
     except:
-	pass
+	    pass
 
 s.close()
 ```
