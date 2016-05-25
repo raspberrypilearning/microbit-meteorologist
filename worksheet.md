@@ -99,7 +99,7 @@ Now you need to create your weather icons. The micro:bit has a 5x5 LED matrix. E
 
 The sun icon should now be displayed on your micro:bit.
 
-1.  Next, you need to create an image for each icon shown above. You can use the ones below, or be a little more creative and make your own. Too save space, the images have been written on a single line.:
+1.  Next, you need to create an image for each icon shown above. You can use the ones below, or be a little more creative and make your own. To save space, the images have been written on a single line:
 
 	```python
 	sun = Image('00000:00900:09990:00900:00000:')
