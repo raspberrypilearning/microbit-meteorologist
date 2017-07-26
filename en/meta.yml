@@ -1,0 +1,27 @@
+---
+title: micro:bit meteorologist
+hero_image: images/banner.png
+description: Display weather icons on your micro:bit, using a Raspberry Pi
+original_url: https://raspberrypi.org/learning/microbit-meteorologist
+theme: red
+duration: 2
+listed: true
+ingredient: false
+copyedit: true
+curriculum: creator, design-0, programming-0, phys-comp-0, manufacture-0, community-0
+interests: ''
+technologies: rpi, physical computing, python
+site_areas: ''
+steps:
+- title: Introduction
+- title: What you will need
+- title: micro:bit meteorologist
+- title: Accessing OpenWeatherMaps
+- title: Getting the weather with Python
+- title: Displaying weather icons
+- title: Communication between the micro:bit and the Raspberry Pi
+- title: Sending the weather
+- title: Receiving the weather data
+- title: Cycling over the forecast
+- title: What next?
+
