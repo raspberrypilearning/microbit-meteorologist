@@ -27,7 +27,7 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 	icons
 	```
 
-You should see some data that looks like this:
+	You should see some data that looks like this:
 
 	```python
 	['02d', '10d', '01d', '01d', '10d', '10d', '01d']
