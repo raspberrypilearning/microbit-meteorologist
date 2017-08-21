@@ -3,7 +3,7 @@ title: micro:bit meteorologist
 hero_image: images/banner.png
 description: Display weather icons on your micro:bit, using a Raspberry Pi
 original_url: https://raspberrypi.org/learning/microbit-meteorologist
-theme: red
+theme: navy
 duration: 2
 listed: true
 ingredient: false
