@@ -12,7 +12,7 @@ The first thing you'll have to do is get access to a **weather API**. API stands
 
 	![img](images/screen2.png)
 
--  Once you're logged in, you should see a page with your **secret** API key. This is important, so copy it to your clipboard:
+-  After you have registered, you will receive an email with your **secret** API key.
 
 	![img](images/screen3.png)
 

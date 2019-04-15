@@ -133,7 +133,7 @@ import serial
 KEY = '61a75f732e10039232d4122fbff52e96'
 location = 'New York,us'
 owm = pyowm.OWM(KEY)
-fc = owm.daily_forecast(location)
+fc = owm.three_hours_forecast(location)
 f = fc.get_forecast()
 icons = [weather.get_weather_icon_name() for weather in f]
 

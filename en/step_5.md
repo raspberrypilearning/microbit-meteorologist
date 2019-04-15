@@ -9,13 +9,13 @@ Now it's time to fetch the weather forecast using a little bit of Python.
 	import pyowm
 
 	## Copy and paste your key into the line below
-	KEY = '61a75f732e10039232d4122fbff52e96'
+	KEY = '1234567890abcdefghijklmnopqrstuvwxyz'
 
 	## Place your location (city, country code) into the line below
 	location = 'New York,us'
 
 	owm = pyowm.OWM(KEY)
-	fc = owm.daily_forecast(location)
+	fc = owm.three_hours_forecast(location)
 	f = fc.get_forecast()
 	icons = [weather.get_weather_icon_name() for weather in f]
 	```

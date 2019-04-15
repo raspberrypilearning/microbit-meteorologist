@@ -1,6 +1,6 @@
 # micro:bit meteorologist
 
-![](cover.png)
+![](en/images/banner.png)
 
 In this resource, you can use a serial link over USB between your Raspberry Pi and a micro:bit, enabling the micro:bit to display weather symbols for the next seven days of weather forecasts.
 
